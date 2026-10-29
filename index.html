@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5ef">
+  <title>마음 한 조각 · 감정 기록</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><a href="./" class="brand">◒ 마음 한 조각</a><span>나를 돌보는 작은 습관</span></header>
+  <main>
+    <section class="intro"><p class="eyebrow">A LITTLE MOMENT FOR YOU</p><h1>오늘의 마음은<br>어떤 색인가요?</h1><p>기쁜 날도, 조금 지친 날도 괜찮아요.<br>지금의 마음을 한 조각 남겨보세요.</p></section>
+    <section class="composer panel" aria-labelledby="write-title">
+      <div class="section-heading"><h2 id="write-title">마음 남기기</h2><span id="today"></span></div>
+      <form id="entry-form">
+        <fieldset><legend>지금 느끼는 감정을 골라주세요</legend><div class="moods">
+          <label class="mood"><input type="radio" name="mood" value="happy" required><span><b>😊</b>행복해요</span></label>
+          <label class="mood"><input type="radio" name="mood" value="calm"><span><b>🌿</b>평온해요</span></label>
+          <label class="mood"><input type="radio" name="mood" value="excited"><span><b>✨</b>설레요</span></label>
+          <label class="mood"><input type="radio" name="mood" value="sad"><span><b>🌧️</b>슬퍼요</span></label>
+          <label class="mood"><input type="radio" name="mood" value="tired"><span><b>😴</b>지쳤어요</span></label>
+          <label class="mood"><input type="radio" name="mood" value="angry"><span><b>🌋</b>화나요</span></label>
+        </div></fieldset>
+        <label class="note-label" for="note">어떤 하루를 보냈나요? <span>짧게 적어도 좋아요</span></label>
+        <textarea id="note" name="note" maxlength="300" rows="4" placeholder="오늘 내 마음에 남은 순간은…" required></textarea>
+        <div class="form-footer"><span id="counter">0 / 300</span><button class="primary" type="submit">마음 저장하기 <span aria-hidden="true">↗</span></button></div>
+        <p id="message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+    <section class="history" aria-labelledby="history-title"><div class="section-heading"><div><p class="eyebrow">MY LITTLE COLLECTION</p><h2 id="history-title">차곡차곡 쌓인 마음 <span id="entry-count">0</span></h2></div><label class="filter-label">감정별 보기<select id="filter"><option value="all">모든 감정</option><option value="happy">😊 행복해요</option><option value="calm">🌿 평온해요</option><option value="excited">✨ 설레요</option><option value="sad">🌧️ 슬퍼요</option><option value="tired">😴 지쳤어요</option><option value="angry">🌋 화나요</option></select></label></div><div id="entries" class="entries"></div></section>
+  </main>
+  <footer>당신의 모든 마음에는 의미가 있어요.<br><small>기록은 이 브라우저에만 저장됩니다. 브라우저 데이터를 지우면 기록도 사라져요.</small></footer>
+</body>
+</html>
